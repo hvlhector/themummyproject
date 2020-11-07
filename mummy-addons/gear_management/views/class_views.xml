@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+
+		<record id="mummy_class_list_view" model="ir.ui.view">
+			<field name="name">mummy.class.list.view</field>
+			<field name="model">mummy.class</field>
+			<field name= "arch" type = "xml">
+				<tree string="Classes List">
+                    <field name="icon" widget="image" class="oe_avatar"/>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+    </data>
+</odoo>

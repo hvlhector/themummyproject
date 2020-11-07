@@ -1,0 +1,107 @@
+<odoo>
+    <data>
+
+
+		<record id="mummy_character_list_view" model="ir.ui.view">
+			<field name="name">mummy.character.list.view</field>
+			<field name="model">mummy.character</field>
+			<field name= "arch" type = "xml">
+				<tree string="Characters List">
+                    <field name="avatar" widget="image" class="oe_avatar"/>
+					<field name="name"/>
+					<field name="user_id"/>
+			 		<field name="pj_intellect"/>
+			 		<field name="pj_stamina"/>
+			 		<field name="pj_agility"/>
+                    <field name="pj_strenght"/>
+                    <field name="pj_versatility"/>
+                    <field name="pj_haste"/>
+                    <field name="pj_critical"/>
+                    <field name="clase_id"/>
+                    <field name="talent_ids" widget="many2many_tags"/>
+				</tree>
+			</field>
+		</record>
+
+
+        <record id="mummy_character_form_view" model="ir.ui.view">
+			<field name="name">mummy.character.form.view</field>
+			<field name="model">mummy.character</field>
+			<field name= "arch" type = "xml">
+				<form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="clase_id"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                               <field name="avatar" widget="image" class="oe_avatar" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="Stats" string="Stats">
+                                <group>
+                                    <group>
+                                        <field name="pj_stamina"/>
+                                        <field name="pj_intellect"/>
+                                        <field name="pj_agility"/>
+                                        <field name="pj_strenght"/>
+                                    </group>
+                                    <group>
+                                        <field name="pj_versatility"/>
+                                        <field name="pj_haste"/>
+                                        <field name="pj_critical"/>
+                                        <field name="pj_mastery"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="Talents" string="Talents">
+                                <field name="talent_ids">
+                                    <tree>
+                                        <field name="icon" widget="image"/>
+                                        <field name="name"/>
+                                        <field name="wow_talent_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+			</field>
+		</record>
+
+
+        <record id="gear_management_character_list_action" model="ir.actions.act_window">
+            <field name="name">Characters List</field>
+            <field name="res_model">mummy.character</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first character
+                </p>
+            </field>
+        </record>
+
+        <record id="gear_management_class_list_action" model="ir.actions.act_window">
+            <field name="name">Classes List</field>
+            <field name="res_model">mummy.class</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first class
+                </p>
+            </field>
+        </record>
+
+
+    	<!-- MENU -->
+        <menuitem id="gear_management_main_menu" name="Gear Management" sequence="10"/>
+            <menuitem id="gear_management_characters" name="Characters" parent="gear_management_main_menu" sequence="1" action="gear_management_character_list_action"/>
+            <menuitem id="gear_management_config" name="Config" parent="gear_management_main_menu" sequence="30"/>
+                <menuitem id="gear_management_config_class" name="Classes" parent="gear_management_config" sequence="1" action="gear_management_class_list_action"/>
+
+
+    </data>
+</odoo>
