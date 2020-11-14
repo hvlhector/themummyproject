@@ -10,6 +10,9 @@ class Item(models.Model):
 
     name = fields.Char(string="Name")
     item_wow_id = fields.Integer(string="Item WoW ID")
+    #TODO add el resto de tipos
+    #DONE. He cambiado Gloves por Hands, Pants por Legs, Boots por Feet, Ring por Finger, Main hand por One hand
+    type = fields.Selection([('head', 'Head'), ('neck', 'Neck'), ('shoulder', 'Shoulder'), ('back', 'Back'), ('chest', 'Chest'), ('wrist', 'Wrist'), ('hands', 'Hands'), ('waist', 'Waist'), ('legs', 'Legs'), ('feet', 'Feet'), ('finger', 'Finger'), ('trinket', 'Trinket'), ('one_hand', 'One_hand'), ('off_hand', 'Off_hand')])
     intellect = fields.Integer(string="Intellect")
     agility = fields.Integer(string="Agility")
     strenght = fields.Integer(string="Strenght")

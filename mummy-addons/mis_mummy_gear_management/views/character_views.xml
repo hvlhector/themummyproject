@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+
+		<record id="mummy_character_list_view_inherits" model="ir.ui.view">
+			<field name="name">mummy.character.list.view</field>
+			<field name="model">mummy.character</field>
+            <field name="inherit_id" ref="mis_mummy_base.mummy_character_list_view"></field>
+			<field name= "arch" type = "xml">
+				<tree string="Characters List">
+					<field name="user_id" position="after">
+                        <field name="pj_intellect"/>
+                    </field>
+                    <field name="pj_intellect" position="after">
+                        <field name="pj_stamina"/>
+                    </field>
+                    <field name="pj_stamina" position="after">
+			 		    <field name="pj_agility"/>
+                    </field>
+                    <field name="pj_agility" position="after">
+                        <field name="pj_strenght"/>
+                    </field>
+                    <field name="pj_strenght" position="after">
+                        <field name="pj_versatility"/>
+                    </field>
+                    <field name="pj_versatility" position="after">
+                        <field name="pj_haste"/>
+                    </field>
+                    <field name="pj_haste" position="after">
+                        <field name="pj_critical"/>
+                    </field>
+				</tree>
+			</field>
+		</record>
+
+    </data>
+</odoo>
