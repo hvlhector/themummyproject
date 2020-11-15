@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+
+
+		<record id="mummy_user_inherit_form_view" model="ir.ui.view">
+			<field name="name">mummy.user.inherit.form.view</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id" ref="base.view_users_simple_form"></field>
+			<field name= "arch" type = "xml">
+				<field name="mobile" position="after">
+					<field name="wow_client_id"/>
+					<field name="wow_client_secret" widget="password"/>
+					<field name="wow_region"/>
+					<field name="wow_namespace"/>
+				</field>
+				<xpath expr="//form/sheet" position="inside">
+					<notebook>
+						<page name="Actions" string="Actions">
+							<group>
+								<group>
+										<button name="synchronize_realms" string="Sync Realms" type="object" class="oe_highlight"/>
+									    <button name="synchronize_pjs" string="Sync Pjs" type="object" class="oe_highlight"/>
+								</group>
+								<group>
+
+								</group>
+							</group>
+						</page>
+					</notebook>
+				</xpath>
+			</field>
+		</record>
+
+    </data>
+</odoo>

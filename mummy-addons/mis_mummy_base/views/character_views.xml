@@ -51,36 +51,5 @@
 			</field>
 		</record>
 
-
-        <record id="mis_gm_character_list_action" model="ir.actions.act_window">
-            <field name="name">Characters List</field>
-            <field name="res_model">mummy.character</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first character
-                </p>
-            </field>
-        </record>
-
-        <record id="mis_gm_class_list_action" model="ir.actions.act_window">
-            <field name="name">Classes List</field>
-            <field name="res_model">mummy.class</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first class
-                </p>
-            </field>
-        </record>
-
-
-    	<!-- MENU -->
-        <menuitem id="mis_gm_main_menu" name="MiS Guild Management" sequence="10"/>
-            <menuitem id="mis_gm_characters" name="Characters" parent="mis_gm_main_menu" sequence="1" action="mis_gm_character_list_action"/>
-            <menuitem id="mis_gm_config" name="Config" parent="mis_gm_main_menu" sequence="30"/>
-                <menuitem id="mis_gm_config_class" name="Classes" parent="mis_gm_config" sequence="1" action="mis_gm_class_list_action"/>
-
-
     </data>
 </odoo>

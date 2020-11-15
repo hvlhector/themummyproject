@@ -2,7 +2,7 @@
 # @author: Alia
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
-   'name': 'MiS Base - The mummies project',
+   'name': 'MiS WoW API - The mummies project',
    'summary': '',
    'version': '12.0.1.0.0',
    'author': 'Mummies S.L.',
@@ -19,16 +19,14 @@
        # Project Dependencies
        # Base Dependencies
        'base',
-       'mis_mummy_wowapi',
    ],
    'demo': [],
    'data': [
        # Security
        # Data
        # Views
-      'views/menu_views.xml',
-      'views/character_views.xml',
-      'views/class_views.xml',
+       'views/user_views.xml',
+       'views/menu_views.xml',
    ],
    'qweb': [],
    'demo': [],

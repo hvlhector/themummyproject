@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <record id="mis_gm_wowapi_realms_list_action" model="ir.actions.act_window">
+            <field name="name">Realms List</field>
+            <field name="res_model">mummy.realm</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first realm
+                </p>
+            </field>
+        </record>
+
+
+    	<!-- MENU -->
+        <menuitem id="mis_gm_wowapi_menu" name="MiS WowApi Setting" sequence="10"/>
+            <menuitem id="mis_gm_wowapi_realms" name="Realms" parent="mis_gm_wowapi_menu" sequence="1" action="mis_gm_wowapi_realms_list_action"/>
+
+
+    </data>
+</odoo>
